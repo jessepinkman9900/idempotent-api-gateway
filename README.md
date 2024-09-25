@@ -12,7 +12,12 @@ mise install
 ./gradlew bootRun
 ```
 
+```sh
+curl localhost:8080/action1 -H "X-Idempotency-Key: 123"
+```
+
 ## Misc
 ```sh
 ./gradlew spotlessApply
 ```
+

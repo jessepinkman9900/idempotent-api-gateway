@@ -11,3 +11,8 @@ mise install
 ```sh
 ./gradlew bootRun
 ```
+
+## Misc
+```sh
+./gradlew spotlessApply
+```

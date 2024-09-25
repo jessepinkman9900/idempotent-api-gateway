@@ -1,0 +1,16 @@
+{
+    "request": {
+        "method": "GET",
+        "urlPath": "/service1/action1"
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "jsonBody": {
+          "name": "service1",
+          "status": "UP"
+        }
+    }
+}

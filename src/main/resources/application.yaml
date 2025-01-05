@@ -4,11 +4,40 @@ spring:
   main:
     web-application-type: reactive
 
+  data:
+    redis:
+      host: redis
+      port: 6379
+
 api-gateway:
+  region: ${REGION:local}
   routes:
     service1:
       source:
         path: /action1
       target:
-        uri: http://localhost:8081
+        uri: http://wiremock:8080
         path: /service1/action1
+
+logging:
+  level:
+    reactor:
+      netty: INFO
+    org:
+      springframework:
+        cloud:
+          gateway: DEBUG
+
+management:
+  tracing:
+    sampling:
+      probability: 1.0
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics,prometheus,traces
+  metrics:
+    enable:
+      http:
+        server:
+          requests: true

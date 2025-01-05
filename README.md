@@ -7,17 +7,12 @@ mise --version
 mise install
 ```
 
-## Run
+### Run on Local
 ```sh
-./gradlew bootRun
+./gradlew build
+docker compose up -d --build
 ```
 
 ```sh
 curl localhost:8080/action1 -H "X-Idempotency-Key: 123"
 ```
-
-## Misc
-```sh
-./gradlew spotlessApply
-```
-

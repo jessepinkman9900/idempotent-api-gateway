@@ -1,2 +1,4 @@
 [tools]
 java = "21"
+pre-commit = "4.0.1"
+k6 = "0.55.2"

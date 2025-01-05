@@ -1,0 +1,35 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.5.0
+    hooks:
+      - id: trailing-whitespace
+      - id: end-of-file-fixer
+      - id: check-yaml
+      - id: check-json
+      - id: check-xml
+      - id: check-toml
+      - id: check-added-large-files
+      - id: forbid-submodules
+      - id: detect-private-key
+  - repo: https://github.com/iamthefij/docker-pre-commit
+    rev: v3.0.1
+    hooks:
+      - id: docker-compose-check
+  - repo: https://github.com/python-jsonschema/check-jsonschema
+    rev: 0.28.0
+    hooks:
+      - id: check-github-workflows
+        args: ["--verbose"]
+  -   repo: https://github.com/rhysd/actionlint
+      rev: v1.6.27
+      hooks:
+        -   id: actionlint
+  -   repo: https://github.com/hija/clean-dotenv
+      rev: v0.0.5
+      hooks:
+        -   id: clean-dotenv
+  - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
+    rev: v2.14.0
+    hooks:
+      - id: pretty-format-java
+        args: [--autofix]

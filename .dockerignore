@@ -1,0 +1,12 @@
+.dockerignore
+Dockerfile
+.github
+.git
+
+mvnw*.*
+.mvn
+pom.xml
+
+gradle
+src
+README.md

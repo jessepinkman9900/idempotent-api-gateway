@@ -16,3 +16,7 @@ docker compose up -d --build
 ```sh
 curl localhost:8080/action1 -H "X-Idempotency-Key: 123"
 ```
+
+```sh
+k6 run ./benchmarks/docker.js
+```
